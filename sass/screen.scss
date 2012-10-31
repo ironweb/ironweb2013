@@ -1,4 +1,5 @@
 @import "compass/reset";
+@import "compass/typography/lists/bullets";
 @import "susy";
 @import "fonts";
 
@@ -110,6 +111,13 @@ ul {
 li {
   font-size: 0.9rem;
   line-height: 1.15rem;
+}
+
+ul.bullets {
+  @include pretty-bullets("bullet.png", 20px, 20px, 25px, 28px);
+  li {
+    line-height: 25px;
+  }
 }
 
 ul.blocks li {
