@@ -35,7 +35,7 @@ $break: 12;
 
   .main-col {
     .block {
-      margin-bottom: $bmarg;
+      margin-bottom: $bmarg * 4;
     }
   }
 
@@ -61,6 +61,8 @@ h1 {
   color: $turquoise;
   font-family: $miso;
   font-size: 4rem;
+  margin-bottom: $bmarg * 2;
+  padding:0 20px;
 }
 
 h2 {
