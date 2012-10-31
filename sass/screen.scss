@@ -1,0 +1,141 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "susy";
+@import "fonts";
+
+
+/* WAQ Theme */
+$turquoise  : #20c2dd;
+$grey       : #6e6e6e;
+$greyLight  : #f3f3f3;
+$marine     : #006287;
+
+/* Mobile first grid */
+$total-columns: 6; // 12 columns
+$column-width: 4em; // columns are 4em wide
+$gutter-width: 1em; // with 1em gutters
+$grid-padding: 1em; // and 1em padding on the grid container
+$bmarg: 12px;
+
+/* Grid switching */
+$break: 12;
+
+.container {
+  @include container($total-columns, $break); 
+
+  font-family: $arial;
+  color: $grey;
+  
+  header, footer { clear: both; }
+
+  .main-col {
+    .block {
+      margin-bottom: $bmarg;
+    }
+  }
+
+  // Create a media-query breakpoint at a min-width of 30em
+  // And use a larger 8-column grid within that media-query.
+  @include at-breakpoint($break) {
+    // Establish our new 12-column container.
+    @include set-container-width;
+    .main-col { 
+      @include span-columns(6, $total-columns);      
+      &.last {
+        @include span-columns(6 omega, $total-columns);
+      }
+    }
+  }
+}
+
+header {
+   color: $grey;
+}
+
+h1 {
+  color: $turquoise;
+  font-family: $miso;
+  font-size: 4rem;
+}
+
+h2 {
+  color: $marine;
+  font-family: $misoLight;
+  font-size: 2rem;
+  margin-bottom: $bmarg;
+}
+
+h3 {
+  color: $marine;
+  font-family: $misoLight;
+  font-size: 1.5rem;
+  margin-bottom: $bmarg;
+}
+
+h4 {
+  color: $marine;
+  font-family: $arial;
+  font-size: 1rem;
+  margin-bottom: $bmarg;
+}
+
+a {
+  color: $marine;
+}
+
+strong { font-weight:bold; }
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.15rem;
+  margin-bottom: $bmarg;
+}
+
+ul {
+  margin-bottom: $bmarg;
+}
+
+li {
+  font-size: 0.9rem;
+  line-height: 1.15rem;
+}
+
+ul.blocks li {
+  background-color:$greyLight;
+  margin-bottom: $bmarg;
+  padding: $bmarg;
+}
+
+.more-2012 {
+  font-size:12px;
+  a { color: $grey; }
+}
+
+.subscribe {
+  color: white;
+  font-family: $miso;
+  font-size: 32px;
+  font-size: 2.1rem;
+  line-height:50px;
+  text-decoration: none;
+  background: transparent url('../assets/btn-subscribe.png') no-repeat top left;
+  display: inline-block;
+  width: 168px;
+  height: 46px;
+  padding: 0 0 0 33px;
+  margin-bottom: $bmarg;
+  -webkit-transition: 0.1s linear;
+  -moz-transition: 0.1s linear; 
+  -ms-transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  transition: 0.1s linear;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover {
+    color: $marine;
+  };
+}
