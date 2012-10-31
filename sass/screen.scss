@@ -53,6 +53,17 @@ $break: 12;
   }
 }
 
+li.ico-yellow:before,
+li.ico-red:before {
+  content: "";
+  padding-right:24px;
+  background: url('../assets/red.png') center left no-repeat;
+}
+
+li.ico-yellow:before {
+  background: url('../assets/yellow.png') center left no-repeat;
+}
+
 header {
    color: $grey;
 }
