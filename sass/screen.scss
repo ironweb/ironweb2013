@@ -126,6 +126,24 @@ ul.blocks li {
   padding: $bmarg;
 }
 
+ul.blocks.icons {
+  @include pretty-bullets("calendar.png", 20px, 20px, 42px, 50px);
+  li {
+    background-color: $greyLight;
+    margin-bottom: $bmarg;
+  }
+  .ico-time {
+    background-image: image-url("time.png");
+  }
+  .ico-calendar {
+    background-image: image-url("calendar.png");
+  }
+  .ico-map {
+    background-image: image-url("map.png");
+  }
+}
+
+
 .more-2012 {
   font-size:12px;
   a { color: $grey; }
