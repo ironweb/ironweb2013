@@ -1,12 +1,6 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
 @import "susy";
 @import "fonts";
-
 
 /* WAQ Theme */
 $turquoise  : #20c2dd;
@@ -15,10 +9,10 @@ $greyLight  : #f3f3f3;
 $marine     : #006287;
 
 /* Mobile first grid */
-$total-columns: 6; // 12 columns
-$column-width: 4em; // columns are 4em wide
-$gutter-width: 1em; // with 1em gutters
-$grid-padding: 1em; // and 1em padding on the grid container
+$total-columns: 6;
+$column-width: 4em;
+$gutter-width: 1.5em;
+$grid-padding: 1em; 
 $bmarg: 12px;
 
 /* Grid switching */
@@ -40,7 +34,7 @@ $break: 12;
   }
 
   // Create a media-query breakpoint at a min-width of 30em
-  // And use a larger 8-column grid within that media-query.
+  // And use a larger 12-column grid within that media-query.
   @include at-breakpoint($break) {
     // Establish our new 12-column container.
     @include set-container-width;
@@ -73,7 +67,7 @@ h1 {
   font-family: $miso;
   font-size: 4rem;
   margin-bottom: $bmarg * 2;
-  padding:0 20px;
+  text-align:center;
 }
 
 h2 {
