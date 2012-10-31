@@ -51,11 +51,11 @@ li.ico-yellow:before,
 li.ico-red:before {
   content: "";
   padding-right:24px;
-  background: url('../assets/red.png') center left no-repeat;
+  background: image-url('red.png') center left no-repeat;
 }
 
 li.ico-yellow:before {
-  background: url('../assets/yellow.png') center left no-repeat;
+  background: image-url('yellow.png') center left no-repeat;
 }
 
 header {
@@ -130,7 +130,7 @@ ul.blocks li {
   font-size: 2.1rem;
   line-height:50px;
   text-decoration: none;
-  background: transparent url('../assets/btn-subscribe.png') no-repeat top left;
+  background: transparent image-url('btn-subscribe.png') no-repeat top left;
   display: inline-block;
   width: 168px;
   height: 46px;
