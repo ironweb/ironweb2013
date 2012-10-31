@@ -27,6 +27,7 @@ $break: 12;
 .container {
   @include container($total-columns, $break); 
 
+  padding-top:2em;
   font-family: $arial;
   color: $grey;
   
