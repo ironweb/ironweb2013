@@ -60,7 +60,11 @@ li.ico-yellow:before {
 }
 
 header {
-   color: $grey;
+  overflow:hidden;
+  padding-bottom: $bmarg * 4;
+  .blocks {
+    padding-top:40px;
+  }
 }
 
 h1 {
