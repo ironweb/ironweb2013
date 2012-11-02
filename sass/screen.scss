@@ -28,7 +28,9 @@ $break: 12;
   font-family: $arial;
   color: $grey;
   
-  header, footer { clear: both; }
+  header, footer { 
+    clear: both;
+  }
 
   .main-col {
     .block {
@@ -90,14 +92,14 @@ h1 {
 h2 {
   color: $marine;
   font-family: $misoLight;
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: $bmarg;
 }
 
 h3 {
   color: $marine;
   font-family: $misoLight;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: $bmarg;
 }
 
