@@ -1,0 +1,3 @@
+[submodule "sass/retina"]
+	path = sass/retina
+	url = git://github.com/joelambert/Retina-Compass-Helpers.git

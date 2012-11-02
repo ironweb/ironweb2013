@@ -4,6 +4,10 @@ Very simple website for Iron Web.
 
 ## Getting started
 
+Init submodules
+
+    git submodule update --init
+
 Styling using sass & compass so use compass watch to recompile assets :
 
     compass watch

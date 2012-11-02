@@ -1,6 +1,7 @@
 @import "compass/reset";
 @import "compass/typography/lists/bullets";
 @import "susy";
+@import "retina";
 @import "fonts";
 
 /* WAQ Theme */
@@ -51,12 +52,16 @@ $break: 12;
 li.ico-yellow:before,
 li.ico-red:before {
   content: "";
-  padding-right:24px;
+  padding-right:28px;
   background: image-url('red.png') center left no-repeat;
 }
 
+li.ico-red:before {
+  @include background-image-retina('red.png');
+}
+
 li.ico-yellow:before {
-  background: image-url('yellow.png') center left no-repeat;
+  @include background-image-retina('yellow.png');
 }
 
 header {
@@ -114,7 +119,7 @@ ul {
 
 li {
   font-size: 0.9rem;
-  line-height: 1.15rem;
+  line-height: 20px;
 }
 
 ul.bullets {
@@ -131,22 +136,26 @@ ul.blocks li {
 }
 
 ul.blocks.icons {
-  @include pretty-bullets("calendar.png", 20px, 20px, 42px, 50px);
   li {
     background-color: $greyLight;
     margin-bottom: $bmarg;
   }
-  .ico-time {
-    background-image: image-url("time.png");
+  li:before {
+    content: "";
+    padding-right:32px;
+    background: image-url('time.png') center left no-repeat;
+    font-size:20px;
   }
-  .ico-calendar {
-    background-image: image-url("calendar.png");
+  .ico-time:before {
+    @include background-image-retina('time.png');
   }
-  .ico-map {
-    background-image: image-url("map.png");
+  .ico-calendar:before {
+    @include background-image-retina('calendar.png');
+  }
+  .ico-map:before  {
+    @include background-image-retina('map.png');
   }
 }
-
 
 .more-2012 {
   font-size:12px;

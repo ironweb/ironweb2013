@@ -1,6 +1,10 @@
 require "susy"
 # Require any additional compass plugins here.
 
+retina_ext = File.join(File.dirname(__FILE__), 'sass/retina')
+require File.join(retina_ext, 'lib', 'sass_extensions.rb')
+add_import_path File.join(retina_ext, 'stylesheets')
+
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "public/css"
