@@ -2,10 +2,11 @@
 @import "compass/typography/lists/bullets";
 @import "susy";
 @import "retina";
+@import "sassy-buttons";
 @import "fonts";
 
 /* WAQ Theme */
-$turquoise  : #20c2dd;
+$turquoise  : #20C2DD;
 $grey       : #6e6e6e;
 $greyLight  : #f3f3f3;
 $marine     : #006287;
@@ -163,26 +164,8 @@ ul.blocks.icons {
 }
 
 .subscribe {
-  color: white;
-  font-family: $miso;
-  font-size: 32px;
-  font-size: 2.1rem;
-  line-height:50px;
-  text-decoration: none;
-  background: transparent image-url('btn-subscribe.png') no-repeat top left;
-  display: inline-block;
-  width: 168px;
-  height: 46px;
-  padding: 0 0 0 33px;
-  margin-bottom: $bmarg;
-  -webkit-transition: 0.1s linear;
-  -moz-transition: 0.1s linear; 
-  -ms-transition: 0.1s linear;
-  -o-transition: 0.1s linear;
-  transition: 0.1s linear;
-  -webkit-font-smoothing: antialiased;
-
-  &:hover {
-    color: $marine;
-  };
+ @include sassy-button("simple", 10px, 19px, #006287);
+ @include sassy-button-gradient("matte", #006287);
+ text-decoration:none;
+ margin-bottom:$bmarg;
 }

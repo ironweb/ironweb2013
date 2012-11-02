@@ -1,4 +1,5 @@
 require "susy"
+require "sassy-buttons"
 # Require any additional compass plugins here.
 
 retina_ext = File.join(File.dirname(__FILE__), 'sass/retina')
