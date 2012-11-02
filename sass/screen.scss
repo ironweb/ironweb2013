@@ -50,6 +50,12 @@ $break: 12;
   }
 }
 
+footer {
+  font-size:0.7rem;
+  text-align:center;
+  margin-bottom: $bmarg * 4;
+}
+
 li.ico-yellow:before,
 li.ico-red:before {
   content: "";
