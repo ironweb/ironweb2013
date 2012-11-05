@@ -81,11 +81,15 @@ header {
   }
 }
 
+.logo {
+  background: image-url('background-small.jpg');
+  padding:($bmarg * 6) 0;
+}
+
 h1 {
   color: $turquoise;
   font-family: $miso;
   font-size: 4rem;
-  margin-top: $bmarg * 4;
   text-align:center;
 }
 
