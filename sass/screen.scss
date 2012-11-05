@@ -95,22 +95,18 @@ h1 {
 
 h2 {
   color: $marine;
-  font-family: $misoLight;
+  font-family: $miso;
   font-size: 2.3rem;
   margin-bottom: $bmarg;
+  @include at-breakpoint($break) {
+    font-family: $misoLight;
+  }
 }
 
 h3 {
   color: $marine;
-  font-family: $misoLight;
+/*  font-family: $miso;*/
   font-size: 1.6rem;
-  margin-bottom: $bmarg;
-}
-
-h4 {
-  color: $marine;
-  font-family: $arial;
-  font-size: 1rem;
   margin-bottom: $bmarg;
 }
 
@@ -132,6 +128,7 @@ ul {
 
 li {
   font-size: 0.9rem;
+  line-height: 1.15rem;
   line-height: 20px;
 }
 
@@ -176,8 +173,10 @@ ul.blocks.icons {
 }
 
 .subscribe {
- @include sassy-button("simple", 10px, 19px, #006287);
+ @include sassy-button("simple", 10px, 28px, #006287);
  @include sassy-button-gradient("matte", #006287);
  text-decoration:none;
  margin-bottom:$bmarg;
+ font-family: $miso;
+ text-transform: uppercase;
 }
