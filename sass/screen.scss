@@ -32,12 +32,6 @@ $break: 12;
     clear: both;
   }
 
-  .main-col {
-    .block {
-      margin-bottom: $bmarg * 4;
-    }
-  }
-
   // Create a media-query breakpoint at a min-width of 30em
   // And use a larger 12-column grid within that media-query.
   @include at-breakpoint($break) {
@@ -49,6 +43,12 @@ $break: 12;
         @include span-columns(6 omega, $total-columns);
       }
     }
+  }
+}
+
+.main-col {
+  .block {
+    margin-bottom: $bmarg * 4;
   }
 }
 
@@ -184,6 +184,11 @@ ul.bullets {
   .ico-map:before  {
     @include background-image-retina('map.png');
   }
+}
+
+.block.about
+{
+ margin-bottom: $bmarg * 2; 
 }
 
 .more-2012 {
