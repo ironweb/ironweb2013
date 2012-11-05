@@ -77,16 +77,27 @@ li.ico-yellow:before {
 }
 
 header {
+  @include background-image-retina('background-small.jpg');
   overflow:hidden;
-  padding-bottom: $bmarg * 4;
+  margin-bottom: $bmarg * 4;
   .blocks {
-    padding-top:40px;
+    padding-bottom: $bmarg;
+    &.icons li {
+      background-color: #f8f8f8;
+    }
+    @include at-breakpoint($break) {
+      padding-top:$bmarg * 3;
+    }
   }
 }
 
-.logo {
-  background: image-url('background-small.jpg');
+.main-col.logo {
   padding:($bmarg * 6) 0;
+  margin-right: 0;
+}
+
+.headlines-container {
+  padding:0 (2 * $bmarg);
 }
 
 h1 {
@@ -148,13 +159,13 @@ ul.bullets {
   }
 }
 
-ul.blocks li {
+.blocks li {
   background-color:$greyLight;
   margin-bottom: $bmarg;
   padding: $bmarg;
 }
 
-ul.blocks.icons {
+.blocks.icons {
   li {
     background-color: $greyLight;
     margin-bottom: $bmarg;
