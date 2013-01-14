@@ -1,4 +1,4 @@
-require 's3-static-site'
+require 'capistrano/s3'
 
 s3 = YAML::load( File.open( File.expand_path( '../s3.yml', __FILE__ ) ) )
 
